@@ -39,21 +39,41 @@ section{
 }
 .hero-h1{
     margin-bottom: 16px;
-    align-self: flex-start;
+    /* align-self: flex-start; */
 }
 .hero-text{
   margin-top: 0px;
-  align-self: flex-start;
-text-align: justify;
+  /* align-self: flex-start; */
+/* text-align: justify; */
+}
+.cards-list {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 20px;
+    overflow-x: auto;
+    margin-left:  auto;
+    justify-content: center;
+}
+.center-cards{
+    /* align-self: center; */
 }
 .card {
     width: 175px;
     font-size: 12px;
+    flex: 0 0 auto;         
+    display: flex;          /* ADD */
+    flex-direction: column; /* ADD */
+    position: relative;
 }
 
 .card--image {
     width: 100%;
     border-radius: 9px;
+    margin-bottom: 9px;
+}
+.card--title {
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .card--stats {
@@ -63,4 +83,19 @@ text-align: justify;
 
 .card--star {
     height: 14px;
+    
+}
+
+/* ADD */
+.card--price {
+    margin-top: auto;
+}
+.card--badge {
+    position: absolute;
+    top: 6px;
+    left: 6px;
+    background-color: white;
+    padding: 5px 7px;
+    border-radius: 2px;
+    font-weight: bold;
 }

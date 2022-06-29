@@ -8,12 +8,8 @@ import tileData from './data'
 function App() {
   const tileDataMap = tileData.map(tile=>(
     <Card 
-    img={tile.coverImg}
-    rating={tile.stats.rating}
-    reviewCount={tile. stats.reviewCount}
-    country={tile.location}
-    title={tile.title}
-    price={tile.price}
+    key={tile.id}
+    item={tile}
    />
   )
   )
@@ -21,7 +17,9 @@ function App() {
     <div className="App">
      <Navbar/>
      <Hero />
+     <section className="cards-list">
     {tileDataMap}
+    </section>
     </div>
   );
 }
